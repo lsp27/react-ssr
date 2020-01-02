@@ -1,0 +1,19 @@
+import {CHANGE_LIST} from './constants'
+// import '../../../../mock/index'
+
+
+const changeList = (list) => ({
+  type: CHANGE_LIST,
+  list
+})
+
+export const getHomeList = () => {
+
+  return (dispatch, getState, axiosInstance) => {
+    return axiosInstance.get('/api/news.json?secret=PP87ANTIPIRATE').then(res => {
+        const list = res.data.data
+        dispatch(changeList(list))
+      }).catch(err => {})
+    
+  }
+}
