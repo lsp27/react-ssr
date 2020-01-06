@@ -12,7 +12,7 @@ class Header extends Component {
         <br />
         {
           login ? <Fragment>
-            <Link to='/login'>翻译列表</Link>
+            <Link to='/translation'>翻页列表</Link>
             <br />
             <div onClick={handleLogout}>退出</div>
           </Fragment> :  <div onClick={handleLogin.bind(this)}>登陆</div>

@@ -22,7 +22,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    if(!this.props.list.length) {
+    if(!(this.props.list && this.props.list.length)) {
       this.props.getHomeList()
     }
   }

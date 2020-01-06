@@ -1,0 +1,1 @@
+export const CHANGE_LIST = 'TRANSLATE/CHANGE_LIST'

@@ -10,7 +10,7 @@ const changeList = (list) => ({
 export const getHomeList = () => {
 
   return (dispatch, getState, axiosInstance) => {
-    return axiosInstance.get('/api/news.json?secret=PP87ANTIPIRATE').then(res => {
+    return axiosInstance.get('/api/news.json').then(res => {
         const list = res.data.data
         dispatch(changeList(list))
       }).catch(err => {})
