@@ -24,7 +24,6 @@ class Header extends Component {
   }
 }
 
-
 const mapState = state => ({
   login: state.header.login
 })

@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {getHomeList} from './store/actions.js'
-
+import styles from  './style.css'
 
 class Home extends Component {
+
+  componentWillMount() {
+    if(this.props.staticContext) {
+      this.props.staticContext.css = styles._getCss()
+    }
+  }
 
   getList() {
     const { list } = this.props
@@ -12,7 +18,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.test}>
         {
           this.getList()
         }
